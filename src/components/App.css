@@ -1,0 +1,21 @@
+.App {
+    display: flex;
+    height: 100%;
+}
+
+.App-Map {
+    flex-grow: 1;
+    position: relative;
+    overflow: auto;
+}
+
+.App-Champs {
+    height: 100%;
+    overflow: auto;
+}
+
+.App-EditMode {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

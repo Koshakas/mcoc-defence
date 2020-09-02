@@ -1,0 +1,19 @@
+.Champ {
+    display: block;
+    padding: 4px;
+}
+
+.Champ:hover {
+    background-color: #EEE;
+}
+
+.Champ--selected {
+    background-color: #DFD;
+}
+
+.Champ img {
+    width: 46px;
+    height: 46px;
+    padding: 0 4px 0 4px;
+    vertical-align: -6px;
+}
