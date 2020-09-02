@@ -57,6 +57,6 @@ export const allNodes: NodeDef[] = [
     {name: 51, x: 500, y: 500},
     {name: 52, x: 500, y: 500},
     {name: 53, x: 500, y: 500},
-    {name: 54, x: 500, y: 500},
-    {name: 55, x: 500, y: 500},
+    {name: 54, x: 542, y: 85},
+    {name: 55, x: 750, y: 80},
 ];
