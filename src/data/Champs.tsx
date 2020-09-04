@@ -48,7 +48,7 @@ export const allChamps: ChampDef[] = [
     {img: '/portraits/portrait_karlmordo.png', name: 'mordo', nodes: [4, 30, 31, 36, 2, 3, 28, 7, 16, 33, 25, 50]},
     {img: '/portraits/portrait_killmonger.png', name: 'killmonger', nodes: [13, 14, 6, 38, 43, 35, 20, 47, 51, 54]},
     {img: '/portraits/portrait_kingpin.png', name: 'kingpin', nodes: [13, 40, 2, 11, 19, 23, 24]},
-    {img: '/portraits/portrait_korg.png', name: 'korg', nodes: [13, 10, ,3, 43, 20, 23, 52]},
+    {img: '/portraits/portrait_korg.png', name: 'korg', nodes: [13, 10, 3, 43, 20, 23, 52]},
     {img: '/portraits/portrait_magik.png', name: 'magik', nodes: [13, 3, 7, 16, 25, 49]},
     {img: '/portraits/portrait_magneto.png', name: 'magneto', nodes: [38, 54]},
     {img: '/portraits/portrait_manthing.png', name: 'manthing', nodes: [4, 13, 30, 27, 28, 34, 35, 19, 39, 47, 49, 50]},
