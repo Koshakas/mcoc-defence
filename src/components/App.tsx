@@ -8,7 +8,7 @@ import {allNodes, NodeDef} from '../data/Nodes';
 function App() {
     const [selectedChamps, setSelectedChamps] = React.useState<string[]>([]);
     const [currentNodes, setCurrentNodes] = React.useState(allNodes);
-    const [editMode, setEditMode] = React.useState(true);
+    const [editMode, setEditMode] = React.useState(false);
     const [selectedNode, setSelectedNode] = React.useState<NodeDef>();
     const nodes: React.ReactNode[] = [];
     for (let i = 0; i < currentNodes.length; i++) {
