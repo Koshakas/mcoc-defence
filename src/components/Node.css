@@ -17,6 +17,13 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.Node--selected {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .Node-Circle {
     width: 16px;
     height: 16px;
@@ -33,4 +40,16 @@
 .Node-Champ {
     width: 32px;
     height: 32px;
+}
+
+.Node-Description {
+    position: absolute;
+    margin-top: 8px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    white-space: pre-line;
 }

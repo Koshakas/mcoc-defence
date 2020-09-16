@@ -3,12 +3,13 @@ import './App.css';
 import {Node} from './Node';
 import {allChamps, ChampDef} from '../data/Champs';
 import {Champ} from './Champ';
-import {allNodes} from '../data/Nodes';
+import {allNodes, NodeDef} from '../data/Nodes';
 
 function App() {
     const [selectedChamps, setSelectedChamps] = React.useState<string[]>([]);
     const [currentNodes, setCurrentNodes] = React.useState(allNodes);
     const [editMode, setEditMode] = React.useState(true);
+    const [selectedNode, setSelectedNode] = React.useState<NodeDef>();
     const nodes: React.ReactNode[] = [];
     for (let i = 0; i < currentNodes.length; i++) {
         const nodeDef = currentNodes[i];
@@ -25,11 +26,13 @@ function App() {
                 nodeDef={nodeDef}
                 champs={nodeChamps}
                 editMode={editMode}
+                selected={selectedNode?.name === nodeDef.name}
                 onEditNode={(dx, dy) => {
                     const newNodes = [...currentNodes];
                     newNodes[i] = {...nodeDef, x: nodeDef.x + dx, y: nodeDef.y + dy};
                     setCurrentNodes(newNodes);
                 }}
+                onSelectNode={setSelectedNode}
             />)
     }
     const champs: React.ReactNode[] = [];
