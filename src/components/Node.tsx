@@ -61,7 +61,7 @@ export const Node: React.FC<Props> = (props: Props) => {
                     </>
                 )}
                 {props.champs.map(champ => (
-                    <img key={champ.name} src={champ.img} alt={champ.name} className='Node-Champ'/>
+                    <img key={champ.name} src={champ.img} alt={champ.name} title={champ.name} className='Node-Champ'/>
                 ))}
             </div>
             {props.selected && (

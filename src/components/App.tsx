@@ -14,10 +14,19 @@ function App() {
     for (let i = 0; i < currentNodes.length; i++) {
         const nodeDef = currentNodes[i];
         const nodeChamps: ChampDef[] = [];
-        for (const selectedChamp of selectedChamps) {
-            const champ = allChamps.filter(c => c.name === selectedChamp)[0];
-            if (champ.nodes.indexOf(nodeDef.name) !== -1) {
-                nodeChamps.push(champ);
+        const selected = selectedNode?.name === nodeDef.name;
+        if (selected) {
+            for (const champ of allChamps) {
+                if (champ.nodes.indexOf(nodeDef.name) !== -1) {
+                    nodeChamps.push(champ);
+                }
+            }
+        } else {
+            for (const selectedChamp of selectedChamps) {
+                const champ = allChamps.filter(c => c.name === selectedChamp)[0];
+                if (champ.nodes.indexOf(nodeDef.name) !== -1) {
+                    nodeChamps.push(champ);
+                }
             }
         }
         nodes.push(
@@ -26,7 +35,7 @@ function App() {
                 nodeDef={nodeDef}
                 champs={nodeChamps}
                 editMode={editMode}
-                selected={selectedNode?.name === nodeDef.name}
+                selected={selected}
                 onEditNode={(dx, dy) => {
                     const newNodes = [...currentNodes];
                     newNodes[i] = {...nodeDef, x: nodeDef.x + dx, y: nodeDef.y + dy};
